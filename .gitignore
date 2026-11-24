@@ -1,0 +1,28 @@
+# Secrets and private configuration
+.env
+.env.*
+*.pem
+*.key
+id_ed25519
+id_rsa
+authorized_keys
+config.local.json
+
+# Local device and connection configuration
+/config/ConnectionSettings.json
+/devices/trusted-devices.json
+
+# Local logs and backups
+/logs/
+/backups/
+*.backup
+*.backup-*
+*.bak
+
+# Node.js dependencies
+node_modules/
+
+
+# Local audit reports
+upgrade-audit.txt
+

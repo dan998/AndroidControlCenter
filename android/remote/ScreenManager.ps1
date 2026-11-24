@@ -1,0 +1,1 @@
+﻿# Screen wake and status

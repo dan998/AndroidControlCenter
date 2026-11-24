@@ -1,0 +1,1 @@
+﻿# Authorized remote device controls

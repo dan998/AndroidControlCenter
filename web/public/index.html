@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <meta name="description" content="Android Control Center device management dashboard">
+    <title>Android Control Center</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="brand-icon">AC</div>
+                <div>
+                    <h1>Android Control</h1>
+                    <span>CONTROL CENTER</span>
+                </div>
+            </div>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <p class="nav-heading">WORKSPACE</p>
+                <a class="nav-link active" href="#overview">Overview</a>
+                <a class="nav-link" href="#devices">Devices</a>
+                <a class="nav-link" href="#connection">Connections</a>
+
+                <p class="nav-heading">MANAGEMENT</p>
+                <a class="nav-link" href="#diagnostics">Diagnostics</a>
+                <a class="nav-link" href="#security">Security</a>
+                <a class="nav-link" href="#activity">Activity logs</a>
+
+                <p class="nav-heading">SYSTEM</p>
+                <a class="nav-link" href="#settings">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                <span>Local dashboard</span>
+                <small>v1.0.0</small>
+            </div>
+        </aside>
+
+        <main class="main-content" id="overview">
+            <header class="topbar">
+                <button class="menu-button" id="menuButton"
+                        type="button" aria-label="Toggle navigation">☰</button>
+
+                <div>
+                    <p class="eyebrow">DEVICE MANAGEMENT</p>
+                    <h2>Dashboard overview</h2>
+                </div>
+
+                <div class="server-indicator">
+                    <span class="status-dot"></span>
+                    <span id="serverStatus">Checking server...</span>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <div>
+                    <p class="eyebrow">ANDROID CONTROL CENTER</p>
+                    <h2>Welcome to your control center.</h2>
+                    <p>Manage and monitor your authorized Android devices from one workspace.</p>
+                </div>
+                <div class="welcome-symbol">⌁</div>
+            </section>
+
+            <section class="section" id="devices">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">CONNECTED HARDWARE</p>
+                        <h3>Device overview</h3>
+                    </div>
+                    <span class="tag neutral" id="deviceStatus">Not connected</span>
+                </div>
+
+                <div class="device-card">
+                    <div class="device-symbol">▯</div>
+                    <div class="device-details">
+                        <h3>No device data available</h3>
+                        <p>The dashboard has not yet been connected to the Windows device-control engine.</p>
+                        <span class="muted">Device information will appear here after integration.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="connection">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SYSTEM CONNECTIVITY</p>
+                        <h3>Service status</h3>
+                    </div>
+                </div>
+
+                <div class="status-grid">
+                    <article class="status-card">
+                        <span class="status-label">Web server</span>
+                        <strong id="apiStatus">Checking...</strong>
+                        <span class="muted">Local Node.js service</span>
+                    </article>
+
+                    <article class="status-card">
+                        <span class="status-label">ADB connection</span>
+                        <strong class="unavailable">Not checked</strong>
+                        <span class="muted">Awaiting Windows integration</span>
+                    </article>
+
+                    <article class="status-card">
+                        <span class="status-label">Online services</span>
+                        <strong class="unavailable">Not configured</strong>
+                        <span class="muted">Remote access is not enabled</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="diagnostics">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">QUICK ACCESS</p>
+                        <h3>Management modules</h3>
+                    </div>
+                </div>
+
+                <div class="module-grid">
+                    <article class="module-card">
+                        <span class="module-icon">▣</span>
+                        <h3>Device information</h3>
+                        <p>View supported device details and hardware information.</p>
+                        <span class="tag neutral">Pending integration</span>
+                    </article>
+
+                    <article class="module-card">
+                        <span class="module-icon">⌘</span>
+                        <h3>Device diagnostics</h3>
+                        <p>Inspect connectivity and supported diagnostic information.</p>
+                        <span class="tag neutral">Pending integration</span>
+                    </article>
+
+                    <article class="module-card" id="security">
+                        <span class="module-icon">◇</span>
+                        <h3>Security center</h3>
+                        <p>Review authorization, permissions and security status.</p>
+                        <span class="tag neutral">Pending integration</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="activity">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">MONITORING</p>
+                        <h3>System activity</h3>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-entry">
+                        <span class="activity-dot"></span>
+                        <div>
+                            <strong>Web dashboard initialized</strong>
+                            <p>The local dashboard is ready for development.</p>
+                        </div>
+                        <time id="currentTime">--:--</time>
+                    </div>
+                    <p class="empty-note">Device activity will appear here after integration.</p>
+                </div>
+            </section>
+
+            <footer class="footer" id="settings">
+                <span>Android Control Center</span>
+                <span>Local development environment</span>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
